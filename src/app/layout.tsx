@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+const basePath = process.env.NODE_ENV === "development" ? "" : "/MyPortfolio-dark";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "SANDY" }],
   icons: {
-    icon: "/favicon.svg",
+    icon: `${basePath}/favicon.svg`,
   },
   openGraph: {
     title: "SANDY — Video Editor & Motion Designer",
